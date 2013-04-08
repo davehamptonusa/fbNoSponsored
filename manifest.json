@@ -2,6 +2,7 @@
   // Required
   "name": "fbNoSponsored",
   "version": "0.0.1",
+  "manifest_version": 2,
 
   // Recommended
   "description": "iJust a hack to get rid of inline ads in facebook",
@@ -17,8 +18,6 @@
   "theme": {...},*/
 
   // Add any of these that you need
-  //"background_page": "planZilla.html",
-  //"chrome_url_overrides": {...},
   "content_scripts": [{
     "matches": ["https://*.facebook.com/*"],
     "js":  [
@@ -27,12 +26,8 @@
 		],
     "run_at": "document_start"
   }],
-  //"minimum_chrome_version": "versionString",
-  //"options_page": "aFile.html",
   "permissions": [
      "tabs",
      "https://www.facebook.com/"
   ]
-  //"plugins": [...],
-  //"update_url": "http://path/to/updateInfo.xml"
 }
